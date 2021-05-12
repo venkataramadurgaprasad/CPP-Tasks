@@ -4,18 +4,20 @@ using namespace std;
 int is_happy_number(int num)
 {
     int res = 0, r;
-    if(num == 1 || num == 7)
-        return 1;
-    while(num >= 10)
+    while(1)
     {
-        while(num)
+        r = num % 10;
+        res += r*r;
+        num /= 10;
+        if(num == 0)
         {
-            r = num % 10;
-            res += r*r;
-            num /= 10;
+            num = res;
+            res = 0;
+            if(num < 10)
+            {
+                break;
+            }
         }
-        num = res;
-        res = 0;
     }
     if(num == 1)
         return 1;
