@@ -5,6 +5,6 @@ int main()
     int num, pos;
     cin>>num>>pos;
     int x = 1<<pos-1;
-    cout<<(num|x)<<" "<<x;
+    cout<<(num|x);
     return 0;
 }
