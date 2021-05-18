@@ -2,6 +2,8 @@
 using namespace std;
 int isBitSet(int N)
 {
+    if(!N)
+        return 0;
     while(N)
         if(N&1)
             N = N>>1;
