@@ -18,16 +18,21 @@ int main()
         {
             cin>>pos;
             cin>>elem;
-            for(int i=n; i>=0; i--)
+            if(pos<=n && pos>=0)
             {
-                if(i == pos-1)
+                for(int i=n; i>=0; i--)
                 {
-                    arr[i] = elem;
-                    break;
+                    if(i == pos-1)
+                    {
+                        arr[i] = elem;
+                        break;
+                    }
+                    arr[i] = arr[i-1];
                 }
-                arr[i] = arr[i-1];
+                n++;
             }
-            n++;
+            else
+                cout<<"Invalid position entered"<<endl;
         }
         for(int i=0; i<n; i++)
             cout<<arr[i]<<" ";
