@@ -15,12 +15,12 @@ int main()
             l2 = l1;
             l1 = a[i];
         }
-        else if(l2 < a[i] && l2 != INT_MIN)
+        else if(l2 < a[i])
         {
             l2 = a[i];
         }
     }
-    if(l2 == INT_MIN)
+    if(l2 == l1)
         cout<<"Not posiible";
     else
         cout<<l2;
