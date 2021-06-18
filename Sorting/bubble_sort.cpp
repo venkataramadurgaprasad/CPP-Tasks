@@ -25,12 +25,12 @@ int main()
     int arr[n];
     for(int i=0; i<n; i++)
         cin>>arr[i];
-    cout<<"Before Sorted: ";
+    cout<<"Before Sort: ";
     for(int i=0; i<n; i++)
         cout<<arr[i]<<" ";
     cout<<endl;
     bubble_sort(arr, n);
-    cout<<"After Sorted: ";
+    cout<<"After Sort: ";
     for(int i=0; i<n; i++)
         cout<<arr[i]<<" ";
 }
